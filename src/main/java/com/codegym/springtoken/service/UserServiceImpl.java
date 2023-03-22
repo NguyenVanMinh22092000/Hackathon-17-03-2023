@@ -33,6 +33,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         }
         Collection<SimpleGrantedAuthority> athorities = new ArrayList<>();
         user.getRoles().forEach(role -> athorities.add(new SimpleGrantedAuthority(role.getName())));
+//        user.getRoles().forEach(role -> log.info("TAO DANG O DAY{}", role));
+        athorities.forEach(role-> log.info("TAO LAI O DAY {}", role));
         return new org.springframework.security.core.userdetails.User(user.getUsername(),
                 user.getPassword(), athorities);
     }

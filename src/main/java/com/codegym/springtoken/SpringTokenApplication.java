@@ -25,23 +25,23 @@ public class SpringTokenApplication {
 	@Bean
 	CommandLineRunner run(UserService userService){
 		return args -> {
-			userService.saveRole(new Role(null, "USER"));
-			userService.saveRole(new Role(null, "ADMIN"));
-			userService.saveRole(new Role(null, "MANAGER"));
-			userService.saveRole(new Role(null, "SUPER_ADMIN"));
-
-			userService.saveUser( new User(null, "Minh", "minh@", "1234", new ArrayList<>()));
-			userService.saveUser( new User(null, "Hen", "hien@", "1234", new ArrayList<>()));
-			userService.saveUser( new User(null, "Phong", "phong@", "1234", new ArrayList<>()));
-			userService.saveUser( new User(null, "Linh", "linh@", "1234", new ArrayList<>()));
-
-			userService.addRoleToUser("minh@", "USER");
-			userService.addRoleToUser("minh@", "ADMIN");
-			userService.addRoleToUser("hien@", "MANAGER");
-			userService.addRoleToUser("hien@", "ADMIN");
-			userService.addRoleToUser("phong@", "USER");
-			userService.addRoleToUser("linh@", "SUPER_ADMIN");
-			userService.addRoleToUser("linh@", "MANAGER");
+//			userService.saveRole(new Role(null, "USER"));
+//			userService.saveRole(new Role(null, "ADMIN"));
+//			userService.saveRole(new Role(null, "MANAGER"));
+//			userService.saveRole(new Role(null, "SUPER_ADMIN"));
+//
+//			userService.saveUser( new User(null, "Minh", "minh@", "1234", new ArrayList<>()));
+//			userService.saveUser( new User(null, "Hen", "hien@", "1234", new ArrayList<>()));
+//			userService.saveUser( new User(null, "Phong", "phong@", "1234", new ArrayList<>()));
+//			userService.saveUser( new User(null, "Linh", "linh@", "1234", new ArrayList<>()));
+//
+//			userService.addRoleToUser("minh@", "USER");
+//			userService.addRoleToUser("minh@", "ADMIN");
+//			userService.addRoleToUser("hien@", "MANAGER");
+//			userService.addRoleToUser("hien@", "ADMIN");
+//			userService.addRoleToUser("phong@", "USER");
+//			userService.addRoleToUser("linh@", "SUPER_ADMIN");
+//			userService.addRoleToUser("linh@", "MANAGER");
 		};
 	}
 }
